@@ -21,7 +21,7 @@
         android:textSize="@android:dimen/app_icon_size"
         android:textStyle="italic"
         />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/incrementbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,8 +29,8 @@
         app:layout_constraintRight_toLeftOf="@id/decrementbutton"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/increment"
-        android:background="#171b75"/>
-    <Button
+        android:background="#428bff"/>
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/decrementbutton"
         android:onClick="decrement"
         android:layout_width="wrap_content"
