@@ -25,7 +25,7 @@
         android:id="@+id/incrementbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/greetingtext"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/decrementbutton"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/increment"
@@ -40,5 +40,12 @@
         app:layout_constraintLeft_toRightOf="@id/incrementbutton"
         android:text="@string/decrement"
         android:background="#8c0f0f"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/greetingtext"
+        app:layout_constraintLeft_toLeftOf="@id/greetingtext"
+        app:layout_constraintRight_toRightOf="@id/greetingtext"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
