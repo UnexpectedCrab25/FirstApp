@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Fünkey Münkey</string>
     <string name="bone_jaw">Bone Jaw</string>
-    <string name="increment">Increment</string>
+    <string name="increment">Text Insert</string>
     <string name="boneappleteeth">bone apple teeth</string>
-    <string name="decrement">Decrement</string>
+    <string name="decrement">Reverse Text</string>
+    <string name="random_word">Random Word</string>
 </resources>

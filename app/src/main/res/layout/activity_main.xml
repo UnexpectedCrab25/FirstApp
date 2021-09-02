@@ -25,27 +25,42 @@
         android:id="@+id/incrementbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/decrementbutton"
+        app:layout_constraintBottom_toTopOf="@id/decrementbutton"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         android:text="@string/increment"
         android:background="#428bff"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/decrementbutton"
-        android:onClick="decrement"
+        android:onClick="Reverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/greetingtext"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/incrementbutton"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/decrement"
         android:background="#8c0f0f"/>
     <EditText
+        android:id="@+id/textediter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Enter Text"
         app:layout_constraintTop_toBottomOf="@id/greetingtext"
         app:layout_constraintLeft_toLeftOf="@id/greetingtext"
         app:layout_constraintRight_toRightOf="@id/greetingtext"
+        android:textColor="@color/white"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/randomword"
+        android:onClick="RandoWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/incrementbutton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/random_word"
+        android:background="#8c0f0f"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
