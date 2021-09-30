@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 Button incrementButton;
@@ -18,6 +20,7 @@ int count = 0;
 String displayChange;
 char[] letters;
 String[] randoms;
+VideoView vid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ String[] randoms;
         incrementButton = findViewById(R.id.incrementbutton);
         greetingDisplay = findViewById(R.id.greetingtext);
         displayChange = "";
+        vid = (VideoView)findViewById(R.id.shreks);
         randoms = new String[]{"apple", "banana", "bababna","jonkers scabby","taco cat","bonkers", "maurice", "carrot", "amogus", "pile", "caret", "aululughugh", "chevron", "hubert", "jimmy"};
         getName = findViewById(R.id.textediter);
         incrementButton.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +40,17 @@ String[] randoms;
                 greetingDisplay.setText(displayChange);
             }
         });
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setContentView(R.layout.restartedlayout);
+        vid = (VideoView)findViewById(R.id.shreks);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shreksophone);
+        vid.setVideoURI(uri);
+        vid.requestFocus();
+        vid.start();
     }
 
     public void Reverse(View view) {
